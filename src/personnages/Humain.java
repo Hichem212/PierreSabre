@@ -43,8 +43,15 @@ public class Humain {
 		System.out.println("(" + nom + ")" + " - " + texte);
 	}
 
-	public int acheter(int achat) {
-		return achat;
+	public void acheter(String bien, int prix) {
+		if (this.argent > prix) {
+			parler("J'ai " + argent + " sous en poche " + " je vais pouvoir m'offrire " + bien + " à " + prix
+					+ " sous");
 
+		} else {
+			parler("Je n'ai plus que " + argent + " sous en poche.Je ne peux même pas m'offrir un " + bien + " à "
+					+ prix + " sous");
+
+		}
 	}
 }
